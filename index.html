@@ -587,7 +587,6 @@ document.getElementById("dl").addEventListener("click",function(){
     return d.save({filename:"tabi-pattern-A4.html", data:blob}).then(function(){ say("Saved. Open the file and print it (A4, 100%)."); },function(){ say("Download was cancelled."); });
   }).catch(plain);
 });
-});
 document.getElementById("copy").addEventListener("click",function(){
   try{ navigator.clipboard.writeText(lastSvg).then(function(){ say("SVG copied (real size, in cm)."); },function(){ say("Copy isn't available here."); }); }
   catch(e){ say("Copy isn't available here."); }
